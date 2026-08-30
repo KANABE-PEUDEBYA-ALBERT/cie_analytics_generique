@@ -1,0 +1,24 @@
+streamlit>=1.40
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+plotly>=5.18
+sqlalchemy>=2.0
+bcrypt>=4.0
+openpyxl>=3.1
+google-generativeai>=0.8
+Pillow>=10.0
+python-dotenv>=1.0
+python-docx>=1.1
+python-pptx>=0.6.23
+reportlab>=4.0
+matplotlib>=3.8   # rendu des graphiques PDF/Word du modèle officiel — pur CPU, pas de navigateur
+wordcloud>=1.9    # nuage de mots dans les rapports PDF/Word/PowerPoint (identique à celui du Tableau de bord)
+kaleido==0.2.1   # utilisé uniquement pour le modèle libre (galerie) ; voir viz/report_builder.py
+
+# Pilotes optionnels pour la connexion à une base de données externe
+# (Import de données > Base de données externe) — installer seulement
+# celui correspondant au type de base réellement utilisé par la CIE :
+# psycopg2-binary   # PostgreSQL
+# pymysql           # MySQL / MariaDB
+# pyodbc            # SQL Server

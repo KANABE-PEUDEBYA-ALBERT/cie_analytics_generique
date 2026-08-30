@@ -1,0 +1,29 @@
+[theme]
+# Couleur "primaire" de Streamlit — celle que le framework utilise en
+# interne (BaseWeb) comme référence par défaut pour de nombreux éléments
+# interactifs : boutons, curseurs, cases cochées, ET certaines pastilles de
+# sélection. Sans ce fichier, Streamlit retombe sur SA PROPRE couleur
+# primaire par défaut (un rouge/rose), qui peut apparaître de façon
+# inattendue sur des éléments qu'on n'a pas explicitement stylés soi-même —
+# exactement le problème rencontré sur les pastilles de multiselect.
+#
+# Définir cette couleur ICI, une seule fois, à la source, est plus robuste
+# que de la corriger après coup avec du CSS/JavaScript widget par widget :
+# tout nouvel élément Streamlit qui n'a pas encore reçu de style personnalisé
+# utilisera déjà l'orange CIE par défaut, jamais le rouge de Streamlit.
+primaryColor = "#FF6B00"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#FFFBF7"
+textColor = "#1A1A1A"
+
+# Police et taille de base — ce réglage est CAPITAL, pas seulement
+# cosmétique : certains composants natifs (le tableau st.dataframe en
+# particulier) dessinent leur texte sur un <canvas>, exactement comme les
+# graphiques Chart.js — aucun CSS injecté via st.markdown ne peut l'atteindre,
+# quelle que soit la règle ou le !important utilisé. Seul CE réglage,
+# lu directement par Streamlit au démarrage, peut agrandir ce texte-là.
+# "Garamond" fonctionne ici car la police est déjà déclarée globalement via
+# @font-face (voir config/theme.py) — un nom de police n'est jamais limité
+# à la portée CSS qui l'a chargé.
+font = "Times New Roman"
+baseFontSize = 14

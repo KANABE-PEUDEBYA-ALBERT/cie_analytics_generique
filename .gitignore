@@ -1,0 +1,30 @@
+# Secrets — ne JAMAIS commiter (clé Gemini, mots de passe...)
+.env
+
+# Bases de données locales (comptes utilisateurs, conversations Assistant)
+data_store/*.db
+data_store/*.sqlite
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Empaquetage desktop (PyInstaller) — dossiers générés, à reconstruire
+# localement à chaque fois, jamais à committer (très volumineux)
+build/
+dist/
+*.spec.bak
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Système
+.DS_Store
+Thumbs.db
